@@ -53,12 +53,12 @@ src
 * Add button
 * Responsive table displaying tasks
 * Delete task functionality
+* markCompleted Functionality
 
 ---
 
 ## Upcoming Features
 
-* Mark task as completed
 * Edit existing task
 * Local Storage support
 * Filter tasks (Optional)

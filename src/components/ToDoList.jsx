@@ -1,6 +1,6 @@
 import ToDoItem from "./ToDoItem";
 
-const ToDoList = ({ todos, deleteTodo }) => {
+const ToDoList = ({ todos, deleteTodo, markCompleted }) => {
     return (
         <div className="max-w-7xl mx-auto px-4 mt-8 overflow-x-auto">
             <table className="w-full border border-gray-300 border-collapse">
@@ -21,6 +21,7 @@ const ToDoList = ({ todos, deleteTodo }) => {
                                 index={index}
                                 todo={todo}
                                 deleteTodo={deleteTodo}
+                                markCompleted={markCompleted}
                             />
                         ))
                     ) : (

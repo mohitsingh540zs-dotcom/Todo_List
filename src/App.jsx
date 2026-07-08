@@ -26,6 +26,20 @@ const App = () => {
     setTodos(updatedTodos);
   };
 
+  const markCompleted = (id) => {
+    const updatedTodos = todos.map((todo => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          completed: !todo.completed
+        };
+      }
+      return todo;
+    }));
+
+    setTodos(updatedTodos);
+  };
+
   return (
     <>
       <Header
@@ -34,7 +48,7 @@ const App = () => {
         handleSubmit={handleSubmit}
       />
 
-      <ToDoList todos={todos} deleteTodo={deleteTodo} />
+      <ToDoList todos={todos} deleteTodo={deleteTodo} markCompleted={markCompleted} />
     </>
   );
 };
