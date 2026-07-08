@@ -52,6 +52,7 @@ src
 * Input field to add new tasks
 * Add button
 * Responsive table displaying tasks
+* Delete task functionality
 
 ---
 
@@ -59,7 +60,6 @@ src
 
 * Mark task as completed
 * Edit existing task
-* Delete task
 * Local Storage support
 * Filter tasks (Optional)
 

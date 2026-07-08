@@ -21,6 +21,11 @@ const App = () => {
     setTask("");
   };
 
+  const deleteTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+  };
+
   return (
     <>
       <Header
@@ -29,7 +34,7 @@ const App = () => {
         handleSubmit={handleSubmit}
       />
 
-      <ToDoList todos={todos} />
+      <ToDoList todos={todos} deleteTodo={deleteTodo} />
     </>
   );
 };

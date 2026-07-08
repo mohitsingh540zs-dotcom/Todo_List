@@ -17,7 +17,7 @@ const Header = ({ task, setTask, handleSubmit }) => {
 
                     <button
                         type="submit"
-                        className="text-lg md:text-xl bg-green-400 px-6 rounded-xl"
+                        className="text-white font-bold text-lg md:text-xl bg-green-400 px-6 rounded-xl"
                     >
                         Add
                     </button>
