@@ -5,6 +5,8 @@ import ToDoList from "./components/ToDoList";
 const App = () => {
   const [task, setTask] = useState("");
   const [todos, setTodos] = useState([]);
+  const [editingId, setEditingId] = useState(null);
+  const [editText, setEditText] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,6 +42,25 @@ const App = () => {
     setTodos(updatedTodos);
   };
 
+  const startEditing = (todo) => {
+    setEditingId(todo.id);
+    setEditText(todo.text);
+  };
+
+  const saveTodo = () => {
+    const updatedTodos = todos.map((todo) =>
+      todo.id === editingId
+        ? { ...todo, text: editText }
+        : todo
+    );
+
+    setTodos(updatedTodos);
+
+    setEditingId(null);
+    setEditText("");
+  };
+
+
   return (
     <>
       <Header
@@ -48,7 +69,16 @@ const App = () => {
         handleSubmit={handleSubmit}
       />
 
-      <ToDoList todos={todos} deleteTodo={deleteTodo} markCompleted={markCompleted} />
+      <ToDoList
+        todos={todos}
+        deleteTodo={deleteTodo}
+        markCompleted={markCompleted}
+        editingId={editingId}
+        editText={editText}
+        setEditText={setEditText}
+        startEditing={startEditing}
+        saveTodo={saveTodo}
+      />
     </>
   );
 };

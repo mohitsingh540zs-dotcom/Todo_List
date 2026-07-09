@@ -54,12 +54,12 @@ src
 * Responsive table displaying tasks
 * Delete task functionality
 * markCompleted Functionality
+* Edit Functinality Added
 
 ---
 
 ## Upcoming Features
 
-* Edit existing task
 * Local Storage support
 * Filter tasks (Optional)
 
@@ -70,7 +70,7 @@ src
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/mohitsingh540zs-dotcom/Todo_List>
 ```
 
 Navigate to the project folder:
@@ -110,6 +110,9 @@ This project focuses on understanding:
 * Responsive UI Design with Tailwind CSS
 
 ---
+## Github Repo Link
+
+https://github.com/mohitsingh540zs-dotcom/Todo_List
 
 ## Author
 

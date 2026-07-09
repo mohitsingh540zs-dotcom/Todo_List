@@ -1,6 +1,6 @@
 import ToDoItem from "./ToDoItem";
 
-const ToDoList = ({ todos, deleteTodo, markCompleted }) => {
+const ToDoList = ({ todos, deleteTodo, markCompleted, editingId, editText, setEditText, startEditing, saveTodo }) => {
     return (
         <div className="max-w-7xl mx-auto px-4 mt-8 overflow-x-auto">
             <table className="w-full border border-gray-300 border-collapse">
@@ -18,10 +18,15 @@ const ToDoList = ({ todos, deleteTodo, markCompleted }) => {
                         todos.map((todo, index) => (
                             <ToDoItem
                                 key={todo.id}
-                                index={index}
                                 todo={todo}
+                                index={index}
                                 deleteTodo={deleteTodo}
                                 markCompleted={markCompleted}
+                                editingId={editingId}
+                                editText={editText}
+                                setEditText={setEditText}
+                                startEditing={startEditing}
+                                saveTodo={saveTodo}
                             />
                         ))
                     ) : (
